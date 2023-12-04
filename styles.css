@@ -1,0 +1,201 @@
+body {
+    background-color: #f0f0f0; /* Mild background color */
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+  }
+  
+  .container {
+    display: flex;
+    height: 100vh; /* Make container full height of the viewport */
+  }
+  
+  #editor-container {
+    flex-grow: 1; /* Allow the editor container to fill the space */
+    padding: 20px;
+  }
+  
+  #editor {
+    height: calc(100% - 40px); /* Full height minus padding */
+    border: 1px solid #ccc;
+    background-color: #fff;
+  }
+  
+  #toolbar {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    width: auto; /* Adjust width automatically based on content */
+    align-items: flex-start; /* Align items to the start */
+  }
+  
+  button {
+    display: block; /* Stack buttons vertically */
+    min-width: 120px; /* Minimum width of buttons */
+    padding: 10px 20px; /* Padding inside buttons */
+    margin-bottom: 10px; /* Space between buttons */
+    border: none;
+    border-radius: 4px;
+    color: white;
+    font-size: 16px;
+    text-align: center; /* Center text horizontally */
+    background-color: #ff7f50; /* Default background color, can be overridden per button */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2); /* Add shadow for depth */
+  }
+  
+  /* Specific background colors for buttons */
+  #myButton {
+    background-color: #ff7f50; /* Coral */
+    height: 60px;
+  }
+  
+  #keyInfoHighlighter {
+    background-color: #32cd32; /* Lime Green */
+    height: 60px;
+  }
+  
+  #readabilityChecker {
+    background-color: #1e90ff; /* Dodger Blue */
+    height: 60px;
+  }
+  
+  .ql-bold {
+    background-color: #ff4500; /* Orange Red */
+  }
+  
+  .ql-italic {
+    background-color: #6a5acd; /* Slate Blue */
+  }
+  
+  button:hover {
+    opacity: 0.8;
+  }
+
+  .language-dropdown {
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+  .hidden {
+    display: none;
+  }
+  
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    z-index: 2; /* Sit on top */
+  }
+  
+  .modal-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fefefe;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 30%; /* Adjust as needed */
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  }
+  
+  .close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+  .modal {
+    display: none; /* Hidden by default */
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.4);
+    z-index: 2;
+  }
+  
+  .modal-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fefefe;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 50%;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  }
+
+  .modal-content {
+    width: 400px; /* Fixed width */
+    height: 300px; /* Fixed height */
+    overflow: auto; /* Enable scrolling if content exceeds height */
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fefefe;
+    padding: 20px;
+    border: 1px solid #888;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  }
+  
+  /* Adjustments for smaller screens if needed */
+  @media screen and (max-width: 480px) {
+    .modal-content {
+      width: 90%;
+      height: auto;
+    }
+}
+  .close, .close-preview {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .close:hover, .close-preview:hover,
+  .close:focus, .close-preview:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  
+  #translationPreview {
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    padding: 10px;
+    min-height: 100px;
+    overflow: auto;
+  }
+
+  /* Style for the highlight in Key Info Highlight Function */
+  .green-highlight {
+    background-color: #90ee90; /* Light green */
+}
+
+.red-highlight {
+    background-color: #ffcccb; /* Light red */
+}
+
+.blue-highlight {
+    background-color: #add8e6; /* Light blue */
+}
+  

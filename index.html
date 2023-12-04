@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Daemon 404</title>
+    <link
+      href="https://cdn.quilljs.com/1.3.6/quill.snow.css"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.quilljs.com/1.3.6/quill.js"></script>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div id="editor-container">
+        <div id="editor">
+          <!-- Quill editor content will go here -->
+        </div>
+      </div>
+
+      <div id="toolbar">
+        <button id="myButton">Translation</button>
+        <button id="keyInfoHighlighter">Key Info Highlighter</button>
+        <button id="readabilityChecker">Readability Check</button>
+        <button class="ql-bold">Bold</button>
+        <button class="ql-italic">Italic</button>
+      </div>
+
+      <!-- Language Selection Modal -->
+      <div id="languageModal" class="modal">
+        <div class="modal-content">
+          <span class="close">&times;</span>
+          <h2>Select Language</h2>
+          <select id="languageSelect">
+            <option value="zh">Chinese</option>
+            <option value="es">Spanish</option>
+            <option value="fr">French</option>
+            <option value="en">English</option>
+            <!-- Add more languages as needed -->
+          </select>
+          <button id="translateButton">Translate</button>
+        </div>
+      </div>
+
+      <!-- Translation Preview Modal -->
+      <div id="previewModal" class="modal">
+        <div class="modal-content">
+          <span class="close-preview">&times;</span>
+          <h2>Translation Preview</h2>
+          <div id="translationPreview"></div>
+          <button id="acceptTranslation">Accept</button>
+          <button id="skipTranslation">Skip</button>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script src="highlight.js"></script>
+    <script src="readability.js"></script>
+  </body>
+</html>
